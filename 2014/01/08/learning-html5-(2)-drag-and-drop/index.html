@@ -1,0 +1,714 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Drag and Drop,HTML5," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="Reference
+Native HTML5 Drag and Drop
+HTML5 Drag and Drop
+
+DemoView Demo
+Each game generates four random numbers, from 1-1000, and displays in the second row.  The user drags the numbers to the spaces">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning HTML5 (2) drag and drop">
+<meta property="og:url" content="http://hellowsummer.github.io/2014/01/08/learning-html5-(2)-drag-and-drop/index.html">
+<meta property="og:site_name" content="Liwen Lu">
+<meta property="og:description" content="Reference
+Native HTML5 Drag and Drop
+HTML5 Drag and Drop
+
+DemoView Demo
+Each game generates four random numbers, from 1-1000, and displays in the second row.  The user drags the numbers to the spaces">
+<meta property="og:image" content="https://rikqrq.bn1.livefilestore.com/y2pqreJ3LfgF1tdDtUylGoNygFdcunG075D3Sx2m7sNIvbDuxpoMqNXzMM_k7ICK5AzL95P6VtRohEND_1SbKyZgaVb4lcgxMpZuvibaO20qw0/drag-and-drop.png">
+<meta property="og:updated_time" content="2016-01-18T22:34:13.661Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learning HTML5 (2) drag and drop">
+<meta name="twitter:description" content="Reference
+Native HTML5 Drag and Drop
+HTML5 Drag and Drop
+
+DemoView Demo
+Each game generates four random numbers, from 1-1000, and displays in the second row.  The user drags the numbers to the spaces">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Learning HTML5 (2) drag and drop | Liwen Lu </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Liwen Lu</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Learning HTML5 (2) drag and drop
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2014-01-08T21:54:20-05:00" content="2014-01-08">
+              2014-01-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Front-End/" itemprop="url" rel="index">
+                    <span itemprop="name">Front End</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="http://www.html5rocks.com/en/tutorials/dnd/basics/" target="_blank" rel="external">Native HTML5 Drag and Drop</a></li>
+<li><a href="http://www.tutorialspoint.com/html5/html5_drag_drop.htm" target="_blank" rel="external">HTML5 Drag and Drop</a></li>
+</ol>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p><a href="/sort-number.html">View Demo</a></p>
+<p>Each game generates four random numbers, from 1-1000, and displays in the second row.  The user drags the numbers to the spaces in the first row to sort them in ascending order. When the first row is filled, it checks if the order is correct. </p>
+<h2 id="Implement_Drag_and_Drop"><a href="#Implement_Drag_and_Drop" class="headerlink" title="Implement Drag and Drop"></a>Implement Drag and Drop</h2><p>(NOTE: only the second row is draggable)<br><a id="more"></a></p>
+<h4 id="HTML_and_CSS"><a href="#HTML_and_CSS" class="headerlink" title="HTML and CSS"></a>HTML and CSS</h4><ul>
+<li>set draggable attribute to true to enable dragging on specific element: <code>&lt;div draggable=&quot;true&quot;&gt;&lt;/div&gt;</code></li>
+<li>in CSS, we need to make the content of draggable element unselectable. <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr_selector">[draggable]</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">-moz-user-select</span>:<span class="value"> none</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">-khtml-user-select</span>:<span class="value"> none</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">-webkit-user-select</span>:<span class="value"> none</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">user-select</span>:<span class="value"> none</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://rikqrq.bn1.livefilestore.com/y2pqreJ3LfgF1tdDtUylGoNygFdcunG075D3Sx2m7sNIvbDuxpoMqNXzMM_k7ICK5AzL95P6VtRohEND_1SbKyZgaVb4lcgxMpZuvibaO20qw0/drag-and-drop.png" alt=""></p>
+<h4 id="Javascript_-_dragstart"><a href="#Javascript_-_dragstart" class="headerlink" title="Javascript - dragstart"></a>Javascript - dragstart</h4><p>The <code>dragstart</code> event fires at the start of dragging. When it fires, we want to set the effect that is allowed for the dragging (in this case is move), and we want to store information about the dragged element (the id of the element).</p>
+<p>Dragstart event could also be used to modify the style of current element, though this is not included in the demo.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleDragStart</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    e.dataTransfer.effectAllowed = <span class="string">'move'</span>;</span><br><span class="line">    e.dataTransfer.setData(<span class="string">'text/html'</span>, <span class="keyword">this</span>.id);</span><br><span class="line">&#125;</span><br><span class="line">....</span><br><span class="line"><span class="comment">// var space = a_space_on_second_row</span></span><br><span class="line">space.addEventListener(<span class="string">'dragstart'</span>, handleDragStart);</span><br></pre></td></tr></table></figure>
+<h4 id="Javascript_-_dragenter_2C_dragover_2C_dragleave_2C_dragend"><a href="#Javascript_-_dragenter_2C_dragover_2C_dragleave_2C_dragend" class="headerlink" title="Javascript - dragenter, dragover, dragleave, dragend"></a>Javascript - dragenter, dragover, dragleave, dragend</h4><p>The <code>dragenter</code> event fires when the mouse just enters an element while a dragging is happening. If for an element, there is no listener for this event (or the listener does not do anything), then dragging to this element is not allowed. In the demo, when the dragging enter a valid destination area, which is the spaces in first row, it will change the border color to red to indicate the element can be dropped here. This is also handled by the dragenter event and is done by add class ‘.over’.</p>
+<p>The <code>dragover</code> event fires while the mouse moving over an element during dragging. Usually it needs to fire <code>e.preventDefault()</code> to prevent default behaviors for things like open a link, click on a button, etc. </p>
+<p>The <code>dragleave</code> event fires when the mouse leave an element during dragging. In this demo, it will restore the default style for valid drop area (i.e. remove class ‘.over’). </p>
+<p>The <code>dragend</code> event fires when a dragging has ended, no matter if the dragged element is droped or not. In this case, it will make sure all additional style added by dragenter are removed.</p>
+<p>All of the dragenter, dragover, and dragleave event is listened by the valid destination elements, which are the spaces in the first row. The dragend event can be fired by spaces in either row since it does not effect by event source.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleDragEnter</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.classList.add(<span class="string">'over'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleDragOver</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (e.preventDefault) &#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">    &#125;</span><br><span class="line">    e.dataTransfer.dropEffect = <span class="string">'move'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleDragLeave</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.classList.remove(<span class="string">'over'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleDragEnd</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> over_spaces = <span class="built_in">document</span>.querySelectorAll(<span class="string">'.over'</span>)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;over_spaces.length; i++) &#123;</span><br><span class="line">        over_spaces[i].classList.remove(<span class="string">'over'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Javascript_-_Drop"><a href="#Javascript_-_Drop" class="headerlink" title="Javascript - Drop"></a>Javascript - Drop</h4><p>The <code>drop</code> event happens when the dragging is ended at a droppable area, and should be listened by destination elements. When drop happens, the corresponding space in row  1 should change to the number being dragged. If there is a number already, the original number should go back to row 2 automatically.</p>
+<p>Also, when drop happens, it should check whether all four of the spaces are filled. If all four are filled, it should check whether the order it correct or not.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function handleDrop(e) &#123;&#10;    var original = document.getElementById(e.dataTransfer.getData(&#39;text/html&#39;)); // acess to the dragged element&#10;    if (original.innerHTML != &#39;&#38;nbsp;&#39;) &#123;  // does not change the number if the dragged element is empty&#10;        var n = original.innerHTML;&#10;        var old_n = this.innerHTML;&#10;        // update numbers....&#10;    &#125;&#10;    &#10;    if (isFilled()) &#123;&#10;        // check correctness...&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Drag-and-Drop/" rel="tag">#Drag and Drop</a>
+          
+            <a href="/tags/HTML5/" rel="tag">#HTML5</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/12/07/learning-html5-(1)-halma/" rel="next" title="Learning HTML5 (1) Halma">
+                <i class="fa fa-chevron-left"></i> Learning HTML5 (1) Halma
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/01/31/how-i-screwed-up-the-first-interview/" rel="prev" title="Interview #1 - Jan 30. 2014">
+                Interview #1 - Jan 30. 2014 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="Liwen Lu" />
+          <p class="site-author-name" itemprop="name">Liwen Lu</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">分類</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demo"><span class="nav-number">2.</span> <span class="nav-text">Demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Implement_Drag_and_Drop"><span class="nav-number">3.</span> <span class="nav-text">Implement Drag and Drop</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML_and_CSS"><span class="nav-number">3.0.1.</span> <span class="nav-text">HTML and CSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Javascript_-_dragstart"><span class="nav-number">3.0.2.</span> <span class="nav-text">Javascript - dragstart</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Javascript_-_dragenter_2C_dragover_2C_dragleave_2C_dragend"><span class="nav-number">3.0.3.</span> <span class="nav-text">Javascript - dragenter, dragover, dragleave, dragend</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Javascript_-_Drop"><span class="nav-number">3.0.4.</span> <span class="nav-text">Javascript - Drop</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Liwen Lu</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+
+  
+  
+
+
+</body>
+</html>

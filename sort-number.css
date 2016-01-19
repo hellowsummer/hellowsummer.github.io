@@ -1,0 +1,51 @@
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+
+.row {
+    border: 3px solid #ccc;
+    display: block;
+    padding: 20px 0px 20px 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 530px;
+}
+
+.space {
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 36px;
+    border: 3px dashed #ccc;
+    text-align: center;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#sorted .over {
+    border: 3px dashed red;
+}
+
+#sorted .title {
+    margin-bottom: 20px;
+}
+
+#original button {
+    width: 106px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 3px solid #ccc;
+}
+
+.msg {
+    display: inline-block;
+    margin-left: 20px;
+    color: red;
+}

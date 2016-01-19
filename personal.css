@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #29C2BD;
+    font-size: 24px;
+    color: white;
+    line-height:1.2;
+}
+
+#container {
+    top: 0;
+}
+
+#nav {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.center-144 {
+    position:absolute;
+    top:50%;
+    height:144px;
+    margin-top:-72px;
+}
+
+#nav>ul {
+    text-align: center;
+    width:100%;
+    top:70%;
+}
+
+.icon {
+    font-size: 72px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.icon:after {
+    font-size: 24px;
+    text-align:center;
+    
+    position: relative;
+    
+    display: block;
+    width: 144px;
+    height: 24px;
+    
+    font-weight: bold;
+}
+
+.educationIcon, .educationIcon > * {
+    color: #F187AF;
+}
+.educationIcon i:nth-of-type(2):before {
+    content: "\f02d";
+}
+#nav .educationIcon:hover:after, 
+#content .educationIcon:after {
+    content: "Education";
+    margin:auto;
+}
+
+.skillIcon, .skillIcon>* {
+    color: #FAE683;
+}
+.skillIcon i:nth-of-type(2):before {
+    content: "\f0ad";
+}
+#nav .skillIcon:hover:after,
+#content .skillIcon:after {
+    content: "Skills";
+    margin:auto;
+}
+
+.projectIcon, .projectIcon > *{
+    color: #A958A7;
+}
+.projectIcon i:nth-of-type(2):before {
+    content: "\f0c3";
+}
+#nav .projectIcon:hover:after,
+#content .projectIcon:after {
+    content: "Projects";
+    margin:auto;
+}
+
+.experienceIcon, .experienceIcon > * {
+    color: #6F7170;
+}
+.experienceIcon i:nth-of-type(2):before {
+    content: "\f0b1";
+}
+#nav .experienceIcon:hover:after,
+#content .experienceIcon:after {
+    content: "Experiences";
+    margin:auto;
+}
+
+.contactIcon, .contactIcon > * {
+    color: #DE9471;
+}
+.contactIcon i:nth-of-type(2):before {
+    content: "\f0e0";
+}
+#nav .contactIcon:hover:after,
+#content .contactIcon:after {
+    content: "Contact";
+    margin:auto;
+}
+
+#content, #education,#skill,#project,#experience,#contact {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 100%;
+}
+#content    { top:100%; }
+#education  { top:0; }
+#skill      { top:100%; }
+#experience { top:200%; }
+#contact    { top:300%; }
+
+#content .icon {
+    width: 20%;
+    text-align: center;
+    margin-left:0;
+    margin-right:0;
+}
+
+#education  i:nth-of-type(2):hover:before,
+#skill      i:nth-of-type(2):hover:before,
+#project    i:nth-of-type(2):hover:before,
+#experience i:nth-of-type(2):hover:before,
+#contact    i:nth-of-type(2):hover:before {
+    content: "\f077";
+}
+
+#content .educationIcon:hover:after,
+#content .skillIcon:hover:after,
+#content .projectIcon:hover:after,
+#content .experienceIcon:hover:after,
+#content .contactIcon:hover:after {
+    content: "Top";
+}
+
+.info {
+    display:inline-block;
+    position:absolute;
+    padding: 40px;
+    left:20%;
+    top:0;
+    bottom:0;
+    right:0;
+}
+.info:after {
+    content: "";
+    background: grey;
+    opacity: 0.5;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:-1;
+}
+
+
+
+#sky {
+    position:absolute;
+    z-index:-2;
+    top:0;
+    height:70%;
+    width: 100%;
+    background-color: #D3E9F4;
+    text-align: center;
+    color: #29C2BD;
+}
+h1 {
+    font-size: 144px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+h3 {
+    font-size: 36px;
+    color: white;
+}
+h4 {
+    display: inline-block;
+    font-size: 28px;
+}
+#contact h4 {
+    width: 5em;
+}
+.info ul {
+    list-style:none;
+}
+.info li:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    margin-right: 2px;
+}
+.info {
+    font-size: 0;
+}
+.info:before {
+      content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+.verticalCenter {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+  
+}
+#skill em {
+    font-style: normal;
+    color: #FAE683;
+    font-weight: bold;
+}
+
+.next {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    font-size:36px;
+    margin-left:-18px;
+    color:white;
+}
+
+#experience h5 {
+    font-size: 12px;
+    color: #6F7170;
+}
+#experience li {
+    font-size: 18px;
+}
+#experience h3 {
+    margin-top: 20px;
+}
+#experience .verticalCenter {
+    max-width: 800px;
+}

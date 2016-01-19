@@ -1,0 +1,103 @@
+* {
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+#nav {
+    display: none;
+}
+.icon, .next {
+    display: none;
+}
+#content {
+    display: block;
+}
+
+#education:before,
+#skill:before,
+#project:before,
+#skill:before,
+#experience:before {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+#education:before {
+    content: 'EDUCATION';
+}
+#skill:before {
+    content: 'SKILLS';
+}
+#project:before{
+    content: 'PROJECTS';
+}
+#experience:before{
+    content: 'EXPERIENCES';
+}
+
+
+h1 {
+    display: block;
+    font-size: 48px;
+    line-height: 1em;
+}
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    display: inline-block;
+}
+h4, h5 {
+    display: inline-block;
+}
+#education h3{
+    display: block;
+}
+#sky h5 {
+    display: block;
+    line-height: 1em;
+}
+#sky h5:after {
+    content: '\Aview this online: http://hellowsummer.github.io/resume.html';
+    white-space: pre-wrap;
+}
+
+
+#sky {
+    width: 75%;
+    margin-bottom: 10px;
+}
+.info {
+    display: block;
+    color: #000;
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+.info ul {
+    list-style: square inside none;
+    margin-left: 5px;
+}
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+#contact {
+    position: fixed;
+    top: 20px;
+    right: 0px;
+}
+#contact .info {
+    margin: 0;
+}
