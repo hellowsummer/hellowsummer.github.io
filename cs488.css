@@ -1,0 +1,38 @@
+body {
+  width: 800px;
+  margin: auto;
+  font-family: 'consolas';
+  font-size: 16px;
+  background-color: #2F2F2F;
+  color: #cca;
+}
+
+.title{
+  text-align: center;
+  font-size:32px;
+}
+
+.objective {
+  border-bottom: 1px solid #ccc;
+  margin: 5px;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h3 {
+  margin-left: 50px;
+  font-weight: normal;
+}
+
+.image {
+  display:block;
+  margin:auto;
+}
+
+img{
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
